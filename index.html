@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span>Mi barra fija - Position y z-index</span>
+      <div class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Secciones</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
   <header class="site-header">
     <div class="header-inner">
       <p class="subtitle">Ejemplos de <strong>box-sizing</strong>, <strong>box model</strong>, <strong>herencia</strong>, <strong>especificidad</strong> y <strong>fuentes</strong></p>
@@ -147,10 +158,23 @@
       </div>
     </section>
 
+    <section class="position-demo">
+      <h2>Position y z-index</h2>
+      <div class="relative-container">
+        <div class="absolute-box box-a">Caja base</div>
+        <div class="absolute-box box-b">Caja superpuesta</div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <p>Práctica de CSS</p>
   </footer>
+
+  <div class="cookie-footer">
+    <span>Usamos cookies para mejorar tu experiencia.</span>
+    <button>Aceptar</button>
+  </div>
 </body>
 </html>
