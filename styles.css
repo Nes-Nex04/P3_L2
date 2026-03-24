@@ -359,13 +359,83 @@ p#important-text {
   color: var(--text);
 }
 
+.responsive-demo {
+  margin-bottom: 3rem;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar,
+.main-content {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+  color: var(--text);
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
+  body {
+    font-size: 16px;
   }
 
-  .intro,
-  .box {
-    padding: 1.25rem;
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  .layout-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    display: block;
+    width: 30%;
+  }
+
+  .main-content {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    width: 25%;
+  }
+
+  .main-content {
+    width: 75%;
   }
 }
