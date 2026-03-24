@@ -208,32 +208,38 @@ h1 {
   font-size: 1.75rem;
 }
 
-.flexbox-container {
+.flex-container.horizontal {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 1rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-container.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
 }
 
-.flexbox-item {
+.flex-item {
   background-color: var(--card-alt);
   color: var(--text);
   padding: 0.75rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  flex: 1 1 120px;
   min-width: 120px;
   text-align: center;
-}
-
-.flexbox-demo p {
-  margin-top: 0.75rem;
-  color: var(--muted);
 }
 
 .specificity-demo {
