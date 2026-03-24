@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica de CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+
+      <p class="subtitle">Ejemplos de <strong>box-sizing</strong>, <strong>box model</strong> y estilos básicos de CSS</p>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="intro">
+      <h2>Cómo funciona el Box Model</h2>
+      <p>
+        Cada elemento HTML es una "caja" que puede contener <strong>contenido</strong>, <strong>relleno</strong>, <strong>borde</strong> y <strong>margen</strong>.
+        En este proyecto verás ejemplos de cómo se comporta cada parte y cómo <code>box-sizing</code> cambia el cálculo de tamaño.
+      </p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3><span class="team-name">Scuderia</span></h3>
+        <p class="card-text">
+          Este bloque usa <code>padding</code>, <code>border</code> y <code>margin</code>. Gracias a <code>box-sizing: border-box</code>, el ancho total se mantiene constante.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3><span class="team-name">Red Shift</span></h3>
+        <p class="card-text">
+          Prueba a cambiar el <code>padding</code> y el <code>border</code> en el archivo <code>styles.css</code> y verás cómo no afecta el tamaño total de la caja.
+        </p>
+      </article>
+
+      <article class="card content-box-example">
+        <h3>Ejemplo: <code>box-sizing: content-box</code></h3>
+        <p class="card-text">
+          Esta caja usa el modelo predeterminado (<code>content-box</code>), por lo que el <code>padding</code> y el <code>border</code> aumentan su ancho total. Mide con herramientas de desarrollador para comprobarlo.
+        </p>
+      </article>
+    </section>
+
+    <section class="box-model-demo">
+      <h2>Comparativa: <code>border-box</code> vs <code>content-box</code></h2>
+
+      <div class="box-examples">
+        <div class="box card border-box">
+          <h3>border-box</h3>
+          <p>El ancho total siempre es el mismo aunque cambies <code>padding</code> y <code>border</code>.</p>
+        </div>
+
+        <div class="box card content-box">
+          <h3>content-box</h3>
+          <p>El ancho total aumenta al añadir <code>padding</code> o <code>border</code>.</p>
+        </div>
+      </div>
+
+      <p class="hint">
+       Puedes abrir las herramientas de desarrollador (F12) y observa el cálculo de la caja en cada ejemplo.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Práctica de CSS </p>
+  </footer>
+</body>
+</html>
