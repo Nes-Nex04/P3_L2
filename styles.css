@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -24,6 +23,7 @@ body {
   color: var(--text);
   min-height: 100vh;
 }
+
 .site-header {
   background: linear-gradient(135deg, #0d1b2a 0%, #0f172a 100%);
   border-bottom: 2px solid rgba(248, 115, 22, 0.1);
@@ -83,7 +83,6 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 1.25rem;
-  
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
@@ -108,6 +107,7 @@ h1 {
 .content-box-example {
   box-sizing: content-box;
 }
+
 .box-model-demo h2 {
   margin: 0 0 1.25rem;
   font-size: 1.75rem;
@@ -151,23 +151,32 @@ h1 {
   margin-bottom: 3rem;
 }
 
-.inheritance-demo .parent-element {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
+.inheritance-demo h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+}
+
+.parent-element {
   color: var(--text);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: left;
+  text-align: center;
+  max-width: 100%;
 }
 
-.inheritance-demo .parent-element span {
+.parent-element span {
   color: var(--accent);
+  font-weight: bold;
 }
 
-.inheritance-demo .parent-element button {
+.btn-inherit {
   font-family: inherit;
   color: inherit;
+  background-color: var(--card-alt);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 .site-footer {
