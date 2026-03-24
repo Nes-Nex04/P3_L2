@@ -9,7 +9,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <p class="subtitle">Ejemplos de <strong>box-sizing</strong>, <strong>box model</strong> y estilos básicos de CSS</p>
+      <p class="subtitle">Ejemplos de <strong>box-sizing</strong>, <strong>box model</strong>, <strong>herencia</strong>, <strong>especificidad</strong> y <strong>fuentes</strong></p>
     </div>
   </header>
 
@@ -73,7 +73,63 @@
         <p>Este párrafo hereda color y tipografía del elemento padre.</p>
         <p>Otro texto que demuestra la herencia en cascada.</p>
         <p class="span-override">Este <span class="accent-text">span</span> rompe la herencia en color.</p>
-        <button class="forced-inheritance-btn">Botón con herencia forzada</button>
+      </div>
+    </section>
+
+    <section class="specificity-demo">
+      <h2>Especificidad en CSS</h2>
+      <p class="hint" style="margin-top: 0; margin-bottom: 2rem;">El sistema de puntos que decide qué regla gana.</p>
+      
+      <div class="cards">
+        <article class="card">
+          <h3>Etiquetas (1 pt)</h3>
+          <p class="card-text">
+            Selectores de tipo como <code>p</code>, <code>div</code> o <code>h1</code> tienen la especificidad más baja.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Clases (10 pts)</h3>
+          <p class="card-text">
+            Selectores de clase (<code>.mi-clase</code>), atributos o pseudoclases tienen prioridad media.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>IDs (100 pts)</h3>
+          <p class="card-text">
+            Los identificadores (<code>#mi-id</code>) son los más fuertes y sobrescriben a las clases y etiquetas.
+          </p>
+        </article>
+      </div>
+
+      <div class="demo-card" style="margin-top: 2rem;">
+        <h3>El poder de <code>!important</code></h3>
+        <p>Rompe todas las reglas de especificidad y cascada.</p>
+        <p id="important-text" class="normal-class">
+          Este texto debería ser naranja por su ID, pero es <strong>azul</strong> porque una regla de etiqueta usa <code>!important</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="fonts-demo" style="margin-top: 4rem;">
+      <h2>Fuentes en CSS</h2>
+      
+      <div class="box-examples">
+        <div class="box card" style="font-family: serif;">
+          <h3>Serif</h3>
+          <p>Con pequeños trazos al final de las letras. Ej: Times New Roman.</p>
+        </div>
+
+        <div class="box card" style="font-family: sans-serif;">
+          <h3>Sans-serif</h3>
+          <p>Más simples y limpias. Ideales para pantallas. Ej: Arial.</p>
+        </div>
+
+        <div class="box card" style="font-family: monospace;">
+          <h3>Monospace</h3>
+          <p>Mismo ancho para todas las letras. Ideal para código.</p>
+        </div>
       </div>
     </section>
 

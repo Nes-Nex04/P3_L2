@@ -154,8 +154,6 @@ h1 {
   color: var(--muted);
 }
 
-/* --- ESTILOS PARA LA NUEVA DEMO DE HERENCIA --- */
-
 .inheritance-demo {
   margin-bottom: 3rem;
 }
@@ -197,24 +195,34 @@ h1 {
   color: var(--accent);
 }
 
-.forced-inheritance-btn {
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
+.specificity-demo {
+  margin-bottom: 3rem;
+}
+
+.specificity-demo h2,
+.fonts-demo h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+#important-text {
+  color: var(--accent);
+}
+
+p#important-text {
+  color: #3b82f6 !important; 
+  font-weight: bold;
+  padding: 1rem;
+  background-color: rgba(59, 130, 246, 0.1);
   border-radius: var(--radius);
-  border: 1px solid var(--accent);
-  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px dashed #3b82f6;
+}
+
+.fonts-demo .box h3 {
   color: var(--text);
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.forced-inheritance-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* --- MEDIA QUERY SIEMPRE AL FINAL --- */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
