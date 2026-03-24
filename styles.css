@@ -147,6 +147,29 @@ h1 {
   text-align: center;
 }
 
+.inheritance-demo {
+  margin-bottom: 3rem;
+}
+
+.inheritance-demo .parent-element {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.inheritance-demo .parent-element span {
+  color: var(--accent);
+}
+
+.inheritance-demo .parent-element button {
+  font-family: inherit;
+  color: inherit;
+}
+
 .site-footer {
   text-align: center;
   padding: 1.75rem 1rem;
